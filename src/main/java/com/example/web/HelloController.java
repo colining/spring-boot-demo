@@ -1,5 +1,6 @@
 package com.example.web;
 
+import com.example.excption.MyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,11 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello() {
         return "Hello World";
+    }
+
+    @RequestMapping("/json")
+    public String json() throws MyException {
+        throw new MyException("发生错误");
     }
 
     @RequestMapping("/")
