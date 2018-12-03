@@ -5,8 +5,9 @@
     <title></title>
 </head>
 <body>
-    <h1 th:text="${host}">Hello World</h1>
-    <h1>use Thymeleaf the page should under the src/main/resources/templates </h1>
-    <h1>should return like "index" by java back end </h1>
-    </body>
+<h1 th:text="${host}">Hello World</h1>
+<h1>use Thymeleaf the page should under the src/main/resources/templates </h1>
+<h1>should return like "index" by java back end </h1>
+<p>点击 <a th:href="@{/hello}">这里</a> 打个招呼吧</p>
+</body>
 </html>

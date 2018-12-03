@@ -4,15 +4,13 @@ import com.example.excption.MyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
 
-    @ResponseBody
     @RequestMapping("/hello")
     public String hello() {
-        return "Hello World";
+        return "hello";
     }
 
     @RequestMapping("/json")
@@ -24,5 +22,10 @@ public class HelloController {
     public String index(ModelMap map) {
         map.addAttribute("host", "http://colining.cn");
         return "index";
+    }
+
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
     }
 }
